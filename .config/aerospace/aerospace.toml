@@ -1,0 +1,97 @@
+after-startup-command = [
+    'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
+]
+
+start-at-login = true # Inicializa aerospace al iniciar sesión
+
+# Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+default-root-container-layout = 'tiles' # Establece el diseño de contenedor raíz por defecto
+default-root-container-orientation = 'auto' # Establece la orientación del contenedor raíz por defecto
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center'] # Mueve el mouse al centro del monitor cuando cambia el foco
+automatically-unhide-macos-hidden-apps = false # €Desoculta automáticamente las aplicaciones ocultas de macOS
+
+[gaps] # Establece el espacio entre nodos
+inner.horizontal = 10
+inner.vertical = 10
+outer.left = 10
+outer.right = 10
+outer.top = 10
+outer.bottom = 10
+
+
+[mode.main.binding]
+# Creación de espacios de trabajo
+alt-1 = 'workspace 1'
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-4 = 'workspace 4'
+alt-5 = 'workspace 5'
+alt-6 = 'workspace 6'
+alt-7 = 'workspace 7'
+alt-8 = 'workspace 8'
+alt-9 = 'workspace 9'
+alt-0 = 'workspace 10'
+
+# Creación de atajos para mover nodos entre espacios de trabajo
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
+alt-shift-4 = 'move-node-to-workspace 4'
+alt-shift-5 = 'move-node-to-workspace 5'
+alt-shift-6 = 'move-node-to-workspace 6'
+alt-shift-7 = 'move-node-to-workspace 7'
+alt-shift-8 = 'move-node-to-workspace 8'
+alt-shift-9 = 'move-node-to-workspace 9'
+alt-shift-0 = 'move-node-to-workspace 10'
+
+alt-shift-minus = 'resize smart -50' # Disminuye el tamaño de la ventana activa
+alt-shift-equal = 'resize smart +50' # Aumenta el tamaño de la ventana activa
+
+alt-w = 'focus up' # Cambia el foco a la ventana de arriba
+alt-s = 'focus down' # Cambia el foco a la ventana de abajo
+alt-a = 'focus left' # Cambia el foco a la ventana de la izquierda
+alt-d = 'focus right' # Cambia el foco a la ventana de la derecha
+
+alt-shift-w = 'move up' # Mueve la ventana activa hacia arriba
+alt-shift-s = 'move down' # Mueve la ventana activa hacia abajo
+alt-shift-a = 'move left' # Mueve la ventana activa hacia la izquierda
+alt-shift-d = 'move right' # Mueve la ventana activa hacia la derecha
+
+alt-f = 'fullscreen' # Alterna entre pantalla completa y ventana normal
+alt-r = 'reload-config' # Recarga la configuración de Aerospace
+
+cmd-m = 'mode manipulation' # Cambia al modo de manipulación
+
+[mode.manipulation.binding]
+minus = 'resize smart -50'
+equal = 'resize smart +50'
+
+up = 'focus up'
+down = 'focus down'
+left = 'focus left'
+right = 'focus right'
+
+alt-up = ['move up', 'mode main']
+alt-down = ['move down', 'mode main']
+alt-left = ['move left', 'mode main']
+alt-right = ['move right', 'mode main']
+
+alt-shift-up = 'move-node-to-monitor up'
+alt-shift-down = 'move-node-to-monitor down'
+
+esc = 'mode main' # Regresa al modo principal
+cmd-m = 'mode manipulation' # Anula cmd-m
+
+# Definición de ubicación de los espacios de trabajo
+[workspace-to-monitor-force-assignment]
+1 = 'main'
+2 = 'main'
+3 = 'main'
+4 = 'main'
+5 = 'main'
+6 = ['secondary', 'main']
+7 = ['secondary', 'main']
+8 = ['secondary', 'main']
